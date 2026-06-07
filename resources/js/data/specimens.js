@@ -169,6 +169,19 @@ export const specimens = [
         repo: `${GH}/tax-clinic`,
         live: 'https://tax-clinic.vercel.app/',
     },
+    {
+        no: 13,
+        slug: 'thank-you-nation',
+        name: '國家會感謝你的',
+        latin: 'Gratia fisci',
+        family: 'metrica',
+        collected: '2026.06',
+        status: 'living',
+        features: ['行政罰鍰累積試算', '金額保密到開獎', '大樂透揭曉 ＋ 灑彩帶', '分級國家感謝狀可下載'],
+        desc: '勾選你幹過的行政違規（闖紅燈、超速、隨地大小便、任意穿越馬路…），金額全程保密，最後用大樂透開獎的方式揭曉你為國庫累積貢獻了多少，並頒發分級「國家感謝狀」。37 項違規分六科。',
+        repo: `${GH}/thank-you-nation`,
+        live: 'https://thank-you-nation.vercel.app/',
+    },
 ];
 
 export const statusMeta = {
