@@ -7,7 +7,7 @@
     "type": "module",
     "scripts": {
         "serve": "vite",
-        "build": "vite build",
+        "production": "vite build",
         "preview": "vite preview"
     },
     "license": "ISC",
