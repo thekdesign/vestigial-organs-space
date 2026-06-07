@@ -1,0 +1,30 @@
+{
+    "name": "vestigial-organs-space",
+    "private": true,
+    "version": "1.0.0",
+    "description": "退化器官博物館：收藏 Kevin 做過的個人小專案，每一個都當作一件浸液標本陳列（純前端靜態網站）",
+    "main": "resources/js/index.js",
+    "type": "module",
+    "scripts": {
+        "serve": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "license": "ISC",
+    "engines": {
+        "node": ">=22"
+    },
+    "dependencies": {
+        "@vercel/analytics": "^2.0.1",
+        "@vercel/speed-insights": "^2.0.0",
+        "reset-css": "^5.0.2",
+        "vue": "^3.5.33"
+    },
+    "devDependencies": {
+        "@tailwindcss/vite": "^4.2.4",
+        "@vitejs/plugin-vue": "^6.0.6",
+        "sass": "^1.99.0",
+        "tailwindcss": "^4.2.4",
+        "vite": "^8.0.10"
+    }
+}

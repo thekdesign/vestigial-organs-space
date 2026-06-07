@@ -1,0 +1,112 @@
+/*
+ * Tailwind 4 entry — CSS-first，沒有 tailwind.config.{js,mjs}。
+ * 沿用 project-common 約定：只載 theme + utilities，不載 preflight；reset 由 reset-css 負責。
+ *
+ * 主題：退化器官博物館。暗夜展廳 × 福馬林浸液 × 做舊標本紙 × 黃銅燈光。
+ */
+
+@import 'reset-css/reset.css';
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@theme {
+    /* === 展廳暗底（墨褐 / 瀝青） === */
+    --color-ink-950: #0b0907;
+    --color-ink-900: #120e0b;
+    --color-ink-800: #1a1410;
+    --color-ink-700: #251c16;
+    --color-ink-600: #34271e;
+
+    /* === 做舊標本紙（標籤） === */
+    --color-paper-100: #f4ead2;
+    --color-paper-200: #e8d9b8;
+    --color-paper-300: #d8c399;
+    --color-paper-400: #c2a878;
+
+    /* === 黃銅 / 燈光 === */
+    --color-brass-300: #e3c179;
+    --color-brass-400: #cba14e;
+    --color-brass-500: #a9802f;
+    --color-brass-600: #7e5d1f;
+
+    /* === 福馬林浸液（青碧） === */
+    --color-formalin-300: #8fc7bd;
+    --color-formalin-400: #5fa093;
+    --color-formalin-500: #3d7b70;
+    --color-formalin-600: #2a5750;
+
+    /* === 標本血肉（科別色） === */
+    --color-flesh-400: #c97a6d;
+    --color-flesh-500: #a8554a;
+    --color-blood-500: #8c3b30;
+
+    /* 科別主題色 */
+    --color-fam-satirica: #c46a5a;  /* 諷世科 — 鏽紅 */
+    --color-fam-metrica: #5fa093;   /* 量度科 — 青碧 */
+    --color-fam-lexica: #cba14e;    /* 辭書科 — 黃銅 */
+    --color-fam-selecta: #8b8fc4;   /* 挑選科 — 灰靛 */
+
+    --opacity-10: 0.1;
+    --opacity-15: 0.15;
+    --opacity-20: 0.2;
+    --opacity-40: 0.4;
+    --opacity-60: 0.6;
+    --opacity-70: 0.7;
+    --opacity-80: 0.8;
+
+    --font-serif: 'Noto Serif TC', 'Songti TC', serif;
+    --font-sans: 'Noto Sans TC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'IBM Plex Mono', 'SFMono-Regular', Menlo, monospace;
+}
+
+/* === 自家 normalize === */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--font-sans);
+    color: var(--color-paper-200);
+    background: var(--color-ink-950);
+}
+
+/* 展廳背景：暗角 + 微噪點 + 燈暈 */
+/* 放大鏡游標：像隔著鏡片檢視標本（黃銅鏡框 + 福馬林青鏡片，熱點在鏡心） */
+:root {
+    --cursor-lens: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32'%3E%3Ccircle cx='13' cy='13' r='8.5' fill='rgba(95,160,147,0.22)' stroke='%23cba14e' stroke-width='2.5'/%3E%3Ccircle cx='13' cy='13' r='8.5' fill='none' stroke='rgba(255,246,220,0.4)' stroke-width='0.8'/%3E%3Cline x1='19.5' y1='19.5' x2='28' y2='28' stroke='%23a9802f' stroke-width='3.4' stroke-linecap='round'/%3E%3C/svg%3E") 13 13, auto;
+}
+
+html {
+    cursor: var(--cursor-lens);
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-ink-950);
+    background-image:
+        radial-gradient(120% 80% at 50% -10%, rgba(203, 161, 78, 0.10), transparent 60%),
+        radial-gradient(80% 60% at 100% 110%, rgba(61, 123, 112, 0.08), transparent 60%),
+        radial-gradient(100% 100% at 50% 50%, transparent 55%, rgba(0, 0, 0, 0.55) 100%);
+    background-attachment: fixed;
+}
+
+button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: var(--cursor-lens);
+    font: inherit;
+    color: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    cursor: var(--cursor-lens);
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
