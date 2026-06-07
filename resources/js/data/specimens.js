@@ -143,6 +143,19 @@ export const specimens = [
         repo: `${GH}/rude-gestures`,
         live: 'https://rude-gestures.vercel.app/',
     },
+    {
+        no: 11,
+        slug: 'cuss-atlas',
+        name: 'Cuss 世界髒話圖鑑',
+        latin: 'Maledictum mundi',
+        family: 'lexica',
+        collected: '2026.06',
+        status: 'living',
+        features: ['打碼解禁檔案', '各國語言罵給你聽', '字面直譯＋髒度分級', '髒話連段 × 罰則表'],
+        desc: '同一句國罵，各國怎麼罵？打碼檔案翻開解禁，附字面直譯、髒度分級與該國語言發聲；另有髒話連段與台灣罵人罰則表，含台語、客語在地用詞。',
+        repo: `${GH}/cuss-atlas`,
+        live: 'https://cuss-atlas.vercel.app/',
+    },
 ];
 
 export const statusMeta = {
