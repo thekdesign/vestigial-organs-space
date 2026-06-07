@@ -156,6 +156,19 @@ export const specimens = [
         repo: `${GH}/cuss-atlas`,
         live: 'https://cuss-atlas.vercel.app/',
     },
+    {
+        no: 12,
+        slug: 'tax-clinic',
+        name: '一稅下去就起不來了',
+        latin: 'Tributum inevitabile',
+        family: 'metrica',
+        collected: '2026.06',
+        status: 'living',
+        features: ['問答式稅務診斷', '九種稅級距估算', '標準／列舉自動擇優', '每稅附合法節稅'],
+        desc: '台灣稅務快速診斷器。幾個問答判斷你會遇到哪些稅、落在哪個級距、要繳多少，綜所稅標準／列舉自動擇優，並在每種稅旁附上合法節稅的眉角。',
+        repo: `${GH}/tax-clinic`,
+        live: 'https://tax-clinic.vercel.app/',
+    },
 ];
 
 export const statusMeta = {
