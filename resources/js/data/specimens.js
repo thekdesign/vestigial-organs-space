@@ -182,6 +182,19 @@ export const specimens = [
         repo: `${GH}/thank-you-nation`,
         live: 'https://thank-you-nation.vercel.app/',
     },
+    {
+        no: 14,
+        slug: 'corruption-tolerance',
+        name: '貪污容忍度計算器',
+        latin: 'Tolerantia corruptionis',
+        family: 'metrica',
+        collected: '2026.06',
+        status: 'living',
+        features: ['20 道貪腐情境題', '算出你的貪味指數', '對照台灣真實貪瀆案', '選項打散不暗示'],
+        desc: '沒人在看的時候，你的線畫在哪？20 個道德灰色情境量出你的「貪味指數」(0–100)，分成六級人設，再對照台灣真實貪瀆案件。選項刻意打散、作答頁不顯分類，逼你誠實拿捏。黑金戲謔風。',
+        repo: `${GH}/corruption-tolerance`,
+        live: 'https://corruption-tolerance.vercel.app/',
+    },
 ];
 
 export const statusMeta = {
