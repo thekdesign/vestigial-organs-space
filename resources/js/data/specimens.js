@@ -195,6 +195,19 @@ export const specimens = [
         repo: `${GH}/corruption-tolerance`,
         live: 'https://corruption-tolerance.vercel.app/',
     },
+    {
+        no: 15,
+        slug: 'poop-studio',
+        name: '便便裝飾工坊',
+        latin: 'Stercus ornatum',
+        family: 'metrica',
+        collected: '2026.07',
+        status: 'living',
+        features: ['馬桶水池自由創作', '配料物理掉落＋半埋', '8 型 × 8 色 × 10 配料', '偽科學腸道指數鑑定'],
+        desc: '在馬桶水池裡裝飾你的專屬便便：選 Bristol 分型、挑顏色、丟紅蘿蔔金針菇玉米等配料（會物理掉落、黏住、半埋進表面），最後一鍵算出「腸道人生指數」與等級稱號，可下載分享鑑定卡。Konva + matter-js 打造。',
+        repo: `${GH}/poop-studio`,
+        live: 'https://poop-studio-rose.vercel.app/',
+    },
 ];
 
 export const statusMeta = {
