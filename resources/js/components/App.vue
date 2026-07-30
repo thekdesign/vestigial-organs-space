@@ -1,16 +1,19 @@
 <template>
     <div class="museum">
         <!-- 展廳門楣 -->
-        <header class="masthead">
-            <p class="masthead__kicker">Cabinet of Curiosities · est. {{ estYear }}</p>
-            <h1 class="masthead__title">退化器官博物館</h1>
-            <p class="masthead__latin">Vestigial Organs Space</p>
-            <p class="masthead__manifesto">
-                痕跡器官，是演化留下、卻不再承擔原本功能的構造。<br />
-                這裡陳列我做過的個人小專案 —— 每一個都源自某次衝動而長出，
-                有的還在跳動，有的早已浸入福馬林。歡迎隔著玻璃參觀。
-            </p>
-        </header>
+        <!-- 門楣加 canvasui 流體背景：滑過標題會有 brass 色流動痕跡（低 blend，標題仍清楚）。 -->
+        <Liquid class="masthead-fluid" :intensity="1.6" :blend="0.4" :color="[0.8, 0.63, 0.31]" :radius="0.18">
+            <header class="masthead">
+                <p class="masthead__kicker">Cabinet of Curiosities · est. {{ estYear }}</p>
+                <h1 class="masthead__title">退化器官博物館</h1>
+                <p class="masthead__latin">Vestigial Organs Space</p>
+                <p class="masthead__manifesto">
+                    痕跡器官，是演化留下、卻不再承擔原本功能的構造。<br />
+                    這裡陳列我做過的個人小專案 —— 每一個都源自某次衝動而長出，
+                    有的還在跳動，有的早已浸入福馬林。歡迎隔著玻璃參觀。
+                </p>
+            </header>
+        </Liquid>
 
         <!-- 科別篩選 -->
         <nav class="filters" aria-label="依科別篩選">
@@ -78,6 +81,7 @@
 import {ref, computed} from 'vue';
 import {specimens, families} from 'data/specimens';
 import SpecimenCard from 'components/common/SpecimenCard.vue';
+import Liquid from 'components/canvasui/Liquid.vue';
 
 const active = ref('all');
 
